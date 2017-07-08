@@ -1,0 +1,9 @@
+language: csharp
+solution: solution-name.sln
+install:
+  - nuget restore IgniteCSharp.sln
+  - nuget install NUnit.Runners -Version 3.6.1 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release IgniteCSharp.sln
+  - mono ./testrunner/NUnit.Runners.3.6.1/tools/nunit-console.exe ./IgniteCSharpTests/bin/Release/IgniteCSharpTests.dll
+  
