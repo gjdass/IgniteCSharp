@@ -8,7 +8,7 @@ namespace IgniteCSharp.Utils
     /// </summary>
     public static class SerializationHelper
     {
-        public static byte[] Serialize<T>(T obj)
+        public static byte[] Serialize<T>(T obj, bool compression = false)
         {
             var stream = new MemoryStream();
             BinaryFormatter bformatter = new BinaryFormatter();
@@ -17,7 +17,7 @@ namespace IgniteCSharp.Utils
             return stream.GetBuffer();
         }
 
-        public static T Deserialize<T>(byte[] bytes)
+        public static T Deserialize<T>(byte[] bytes, bool compression = false)
         {
             var stream = new MemoryStream(bytes);
             BinaryFormatter bformatter = new BinaryFormatter();

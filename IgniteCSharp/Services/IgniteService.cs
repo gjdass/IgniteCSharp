@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
 using Apache.Ignite.Core;
 using Apache.Ignite.Core.Cache;
+using Apache.Ignite.Core.Log;
+using Apache.Ignite.Log4Net;
 using IgniteCSharp.Models;
 using IgniteCSharp.Utils;
+using log4net;
 
 namespace IgniteCSharp.Services
 {
     public class IgniteService
     {
-        private BaseLogger _logger = new BaseLogger("IgniteService");
-        private IgniteConfiguration _igniteConfiguration;
+        private readonly ILogger _logger = new IgniteLog4NetLogger(LogManager.GetLogger("IgniteService"));
+        private readonly IgniteConfiguration _igniteConfiguration;
 
         public IIgnite Ignite;
         public ICache<string, byte[]> Cache;

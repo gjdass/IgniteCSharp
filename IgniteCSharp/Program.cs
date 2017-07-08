@@ -2,18 +2,22 @@
 using System.Threading;
 using Apache.Ignite.Core;
 using Apache.Ignite.Core.Discovery.Tcp;
+using Apache.Ignite.Core.Log;
+using Apache.Ignite.Log4Net;
 using IgniteCSharp.Services;
 using IgniteCSharp.Utils;
+using log4net;
+using log4net.Config;
 
 namespace IgniteCSharp
 {
     class Program
     {
-        private static readonly BaseLogger _logger  = new BaseLogger("Program");
+        private static readonly ILogger Logger = new IgniteLog4NetLogger(LogManager.GetLogger(typeof(Program)));
 
         static void Main(string[] args)
         {
-            _logger.Info("Starting IgniteCSharp instance ...");
+            Logger.Info("Starting IgniteCSharp instance");
             StartIgniteService();
             Thread.Sleep(Timeout.Infinite);
         }
@@ -22,6 +26,7 @@ namespace IgniteCSharp
         {
             var igniteConf = new IgniteConfiguration
             {
+                Logger = Logger,
                 DiscoverySpi = new TcpDiscoverySpi
                 {
                     LocalAddress = ConfigurationManager.AppSettings["IgniteHost"]
