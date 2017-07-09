@@ -6,8 +6,8 @@
     <ProjectGuid>{940F4985-9666-4649-9C27-A8A4B17286FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IgniteCSharpTests</RootNamespace>
-    <AssemblyName>IgniteCSharpTests</AssemblyName>
+    <RootNamespace>IgniteServiceTests</RootNamespace>
+    <AssemblyName>IgniteServiceTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

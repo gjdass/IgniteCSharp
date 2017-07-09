@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgniteCSharp", "IgniteCSharp\IgniteCSharp.csproj", "{12727D11-E93A-445B-B750-9DCAC9689BA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{B7A25B63-CEB7-4042-9B57-17B146E1F96B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgniteCSharpTests", "IgniteCSharpTests\IgniteCSharpTests.csproj", "{940F4985-9666-4649-9C27-A8A4B17286FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgniteHost", "IgniteHost\IgniteHost.csproj", "{12727D11-E93A-445B-B750-9DCAC9689BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgniteService", "IgniteService\IgniteService.csproj", "{0C79A386-B0B4-49B9-8060-25CFB484E49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgniteServiceTests", "Tests\IgniteServiceTests\IgniteServiceTests.csproj", "{940F4985-9666-4649-9C27-A8A4B17286FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{98416453-A97C-470D-8927-E91F63D7ECA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +19,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A25B63-CEB7-4042-9B57-17B146E1F96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A25B63-CEB7-4042-9B57-17B146E1F96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A25B63-CEB7-4042-9B57-17B146E1F96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A25B63-CEB7-4042-9B57-17B146E1F96B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12727D11-E93A-445B-B750-9DCAC9689BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12727D11-E93A-445B-B750-9DCAC9689BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12727D11-E93A-445B-B750-9DCAC9689BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12727D11-E93A-445B-B750-9DCAC9689BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C79A386-B0B4-49B9-8060-25CFB484E49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C79A386-B0B4-49B9-8060-25CFB484E49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C79A386-B0B4-49B9-8060-25CFB484E49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C79A386-B0B4-49B9-8060-25CFB484E49E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{940F4985-9666-4649-9C27-A8A4B17286FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{940F4985-9666-4649-9C27-A8A4B17286FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940F4985-9666-4649-9C27-A8A4B17286FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -24,5 +38,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{940F4985-9666-4649-9C27-A8A4B17286FD} = {98416453-A97C-470D-8927-E91F63D7ECA3}
 	EndGlobalSection
 EndGlobal

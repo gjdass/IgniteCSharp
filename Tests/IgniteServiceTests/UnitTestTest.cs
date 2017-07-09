@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace IgniteCSharpTests
+namespace IgniteServiceTests
 {
     public class UnitTestTest
     {

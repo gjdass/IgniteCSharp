@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IgniteCSharp.Models
+namespace IgniteService.Models
 {
     [Serializable]
     public class SubEntity
