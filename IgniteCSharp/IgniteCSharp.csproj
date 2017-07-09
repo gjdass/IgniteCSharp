@@ -64,7 +64,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent Condition="'$(OS)'=='Windows_NT'">
+    <PostBuildEvent>
 if not exist "$(TargetDir)Libs" md "$(TargetDir)Libs"
 xcopy /s /y "$(SolutionDir)packages\Apache.Ignite.2.0.0\Libs\*.*" "$(TargetDir)Libs"</PostBuildEvent>
   </PropertyGroup>
